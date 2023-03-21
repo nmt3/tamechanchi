@@ -1,0 +1,2 @@
+module User::MenuHelper
+end
