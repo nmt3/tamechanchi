@@ -1,6 +1,9 @@
 class Admin::MenusController < ApplicationController
   def index
-    menu
+    # menu
+  end
+
+  def show
   end
 
   def edit
