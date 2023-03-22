@@ -8,7 +8,8 @@ Rails.application.routes.draw do
 
   scope module: :user do
     root to: 'homes#top'
-    resources :menu, only: [:index]
+    resources :menu, only: [:index, :show]
+    resources :shop, only: [:show]
   end
 
   # 管理者用
@@ -19,7 +20,8 @@ Rails.application.routes.draw do
   }
 
   namespace :admin do
-    resources :menus, only: [:index, :edit, :create, :update, :destroy]
+    get "/" => "menus#index"
+    resources :menus, only: [:show, :edit, :create, :update, :destroy]
     resources :shops, only: [:show, :edit, :create, :update, :destroy]
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

@@ -3,6 +3,7 @@ class CreateShops < ActiveRecord::Migration[6.1]
     create_table :shops do |t|
       t.string :name
       t.string :telephone
+      t.string :address
 
       t.timestamps
     end

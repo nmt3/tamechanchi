@@ -1,6 +1,7 @@
 class Admin::MenusController < ApplicationController
+  before_action :authenticate_admin!
   def index
-    # menu
+    # @menu = Menu.all
   end
 
   def show
