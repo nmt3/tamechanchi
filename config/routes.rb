@@ -1,12 +1,4 @@
 Rails.application.routes.draw do
-  namespace :user do
-    get 'inquiries/show'
-  end
-  namespace :admin do
-    get 'inquiries/index'
-    get 'inquiries/show'
-    get 'inquiries/edit'
-  end
 # 顧客用
 # URL /customers/sign_in ...
   devise_for :users, skip:[:passwords], controllers: {
@@ -18,6 +10,7 @@ Rails.application.routes.draw do
     root to: 'homes#top'
     resources :menu, only: [:index, :show]
     resources :shop, only: [:show]
+    resources :inquiries, only: [:show, :create]
   end
 
   # 管理者用
@@ -31,6 +24,7 @@ Rails.application.routes.draw do
     get "/" => "menus#index"
     resources :menus, only: [:show, :edit, :create, :update, :destroy]
     resources :shops, only: [:show, :edit, :create, :update, :destroy]
+    resources :inquiries, only: [:index, :show, :edit, :create, :update, :destroy]
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

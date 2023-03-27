@@ -1,4 +1,5 @@
 class Admin::InquiriesController < ApplicationController
+  before_action :authenticate_admin!
   def index
   end
 
@@ -6,5 +7,14 @@ class Admin::InquiriesController < ApplicationController
   end
 
   def edit
+  end
+
+  def create
+  end
+
+  def update
+  end
+
+  def destroy
   end
 end
