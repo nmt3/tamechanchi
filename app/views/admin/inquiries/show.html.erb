@@ -1,2 +1,17 @@
-<h1>Admin::Inquiries#show</h1>
-<p>Find me in app/views/admin/inquiries/show.html.erb</p>
+<h2>お問い合せ</h2>
+<%= form_with model: Inquiry do |f| %>
+  <%= f.label "名前" %>
+  <%= f.text_field :name %>
+
+  <%= f.label "件名" %>
+  <%= f.text_field :title %>
+
+  <%= f.label "お問い合わせ内容" %>
+  <%= f.text_area :content %>
+
+  <%= f.label "電話番号" %>
+  <%= f.text_field :phone %>
+
+  <%= f.label "メールアドレス" %>
+  <%= f.text_field :mail %>
+<% end %>
