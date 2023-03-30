@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     root to: 'homes#top'
     resources :menu, only: [:index, :show]
     resources :shop, only: [:show]
-    resources :inquiries, only: [:show, :create]
+    resources :inquiries, only: [:new, :create]
   end
 
   # 管理者用

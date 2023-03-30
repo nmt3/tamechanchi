@@ -1,2 +1,5 @@
-<h1>Admin::Inquiries#index</h1>
-<p>Find me in app/views/admin/inquiries/index.html.erb</p>
+<% @inquiries.each do |inquiries| %>
+  <%= inquiries.id %>
+  <%= link_to "inquiries.title", admin_inquiry_path(inquiries.id)%>
+  <%= inquiries.content %>
+<% end %>

@@ -1,20 +1,11 @@
 class Admin::InquiriesController < ApplicationController
   before_action :authenticate_admin!
   def index
+    @inquiries = Inquiry.all
   end
 
   def show
+    @inquiry = Inquiry.find(params[:id])
   end
 
-  def edit
-  end
-
-  def create
-  end
-
-  def update
-  end
-
-  def destroy
-  end
 end
