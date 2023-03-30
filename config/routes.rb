@@ -22,8 +22,8 @@ Rails.application.routes.draw do
 
   namespace :admin do
     get "/" => "menus#index"
-    resources :menus, only: [:show, :edit, :create, :update, :destroy]
-    resources :shops, only: [:show, :edit, :create, :update, :destroy]
+    resources :menus, only: [:new, :index, :show, :edit, :create, :update, :destroy]
+    resources :shops, only: [:index, :edit, :create, :update]
     resources :inquiries, only: [:index, :show, :edit, :create, :update, :destroy]
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
