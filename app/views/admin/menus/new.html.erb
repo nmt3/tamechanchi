@@ -1,12 +1,2 @@
-<h2>商品新規登録</h2>
-<%= form_with model: Menu do |f| %>
-  <%= f.label "商品名" %>
-  <%= f.text_field :name %>
-
-  <%= f.label "価格" %>
-  <%= f.text_field :price %>
-
-  <%= f.label "ジャンル" %>
-
-  <%= f.submit "保存" %>
+<%= form_with model: Menu.new do |f| %>
 <% end %>
