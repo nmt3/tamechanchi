@@ -29,7 +29,7 @@ class Admin::MenusController < ApplicationController
   private
 
   def menu_params
-    params.require(:menu).permit(:name, :price)
+    params.require(:menu).permit(:name, :price, :image)
   end
 
 

@@ -1,4 +1,8 @@
 <%= form_with model: @menu, url: admin_menus_path do |f| %>
+
+  <%= f.label "画像" %>
+  <%= f.file_field :image, accept: "image/*" %>
+
   <%= f.label "商品名" %>
   <%= f.text_field :name %>
 
