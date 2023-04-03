@@ -22,7 +22,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     get "/" => "menus#index"
-    resources :menus, only: [:new, :index, :show, :edit, :create, :update, :destroy]
+    resources :menus, only: [:new, :show, :edit, :create, :update, :destroy]
     resources :shops, only: [:index, :edit, :create, :update]
     resources :inquiries, only: [:index, :show, :edit, :create, :update, :destroy]
   end

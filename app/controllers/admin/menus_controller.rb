@@ -17,7 +17,9 @@ class Admin::MenusController < ApplicationController
   end
 
   def create
-
+    @menu = Menu.new(menu_params)
+    @menu.save
+    redirect_to admin_menu_path(@menu.id)
   end
 
   def update
@@ -29,7 +31,7 @@ class Admin::MenusController < ApplicationController
   private
 
   def menu_params
-    params.require(:menu).permit(:name, :price, :image)
+    params.require(:menu).permit(:name, :price, :image, :genre_id)
   end
 
 

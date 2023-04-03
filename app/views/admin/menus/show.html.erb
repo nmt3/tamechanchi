@@ -1,0 +1,5 @@
+<%= image_tag @menu.image, size: "300x300" %>
+<p>商品名</p>
+<%= @menu.name %>
+<p>価格(税込)</p>
+¥<%= @menu.price %>(¥<%= @menu.with_tax_price %>)
