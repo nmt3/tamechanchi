@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    get 'genre/index'
+    get 'genre/edit'
+  end
 # 顧客用
 # URL /customers/sign_in ...
   devise_for :users, skip:[:passwords], controllers: {
@@ -21,9 +25,9 @@ Rails.application.routes.draw do
   }
 
   namespace :admin do
-    get "/" => "menus#index"
-    resources :menus, only: [:new, :show, :edit, :create, :update, :destroy]
-    resources :shops, only: [:index, :edit, :create, :update]
+    get "/" => "shops#index"
+    resources :menus, only: [:new, :index, :show, :edit, :create, :update, :destroy]
+    resources :shops, only: [:edit, :create, :update]
     resources :inquiries, only: [:index, :show, :edit, :create, :update, :destroy]
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

@@ -1,4 +1,10 @@
-<%= image_tag @menu.image, size: "300x300" %>
+<%= link_to "編集する", edit_admin_menu_path(@menu.id) %>
+
+<% if @menu.image.attached? %>
+  <%= image_tag @menu.image, size: "300x300" %>
+ <% else %>
+  <%= image_tag "no_image", size: "300x300" %>
+ <% end %>
 <p>商品名</p>
 <%= @menu.name %>
 <p>価格(税込)</p>
