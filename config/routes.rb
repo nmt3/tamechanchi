@@ -9,8 +9,8 @@ Rails.application.routes.draw do
 
   scope module: :user do
     root to: 'homes#top'
-    resources :menu, only: [:index, :show]
-    resources :shop, only: [:show]
+    resources :menus, only: [:index, :show]
+    resources :shops, only: [:index]
     resources :inquiries, only: [:new, :create]
   end
 
