@@ -77,9 +77,11 @@ ActiveRecord::Schema.define(version: 2023_04_05_104703) do
   end
 
   create_table "shops", force: :cascade do |t|
-    t.string "name"
     t.string "telephone"
     t.string "address"
+    t.string "post_code"
+    t.string "business_time"
+    t.string "holiday"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
