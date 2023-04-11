@@ -11,65 +11,9 @@
   </head>
 
   <body>
-    <header>
-      <h1 class="heading">
-        為ちゃん家
-      </h1>
-
-    </header>
-    <nav>
-      <ul class="nav-list">
-        <% if admin_signed_in? %>
-          <li>
-            <%= link_to admin_menus_path, class: "nav-link text" do %>
-              <i class="fa-solid fa-list-ul"></i>
-              メニュー
-            <% end %>
-          </li>
-          <li>
-            <%= link_to admin_genres_path do %>
-              <i class="fa-solid fa-list-ul"></i>
-              ジャンル
-            <% end %>
-          </li>
-          <li>
-            <%= link_to "/admin" do %>
-              <i class="fa-solid fa-users"></i>
-              店舗情報
-            <% end %>
-          </li>
-          <li>
-            <%= link_to admin_inquiries_path do %>
-              <i class="fa-solid fa-users"></i>
-              お問合せ一覧
-            <% end %>
-          </li>
-          <li>
-            <%= link_to destroy_admin_session_path, method: :delete do  %>
-              <i class="fa-sharp fa-solid fa-arrow-right-from-bracket"></i>
-              ログアウト
-            <% end %>
-          </li>
-        <% else %>
-          <li><a href="/">HOME</a></li>
-          <li>
-            <%= link_to menus_path do %>
-              メニュー
-            <% end %>
-          </li>
-          <li>
-            <%= link_to shops_path do %>
-              店舗情報
-            <% end %>
-          </li>
-          <li>
-            <%= link_to new_inquiry_path do %>
-              お問合せ
-            <% end %>
-          </li>
-        <% end %>
-      </ul>
-    </nav>
+    <% unless current_page?(root_path) %> <%# unlessで現在のページがrootなら呼び出さない %>
+      <%= render "layouts/header" %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
