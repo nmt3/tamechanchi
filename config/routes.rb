@@ -25,7 +25,7 @@ Rails.application.routes.draw do
     get "/" => "shops#index"
     resources :menus, only: [:new, :index, :show, :edit, :create, :update, :destroy]
     resources :genres, only:[:index, :edit, :create, :update]
-    resources :shops, only: [:edit, :create, :update]
+    resources :shops, only: [:new, :edit, :create, :update]
     resources :inquiries, only: [:index, :show, :edit, :create, :update, :destroy]
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

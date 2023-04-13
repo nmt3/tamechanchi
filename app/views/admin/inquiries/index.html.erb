@@ -1,5 +1,14 @@
 <% @inquiries.each do |inquiries| %>
-  <%= inquiries.id %>
-  <%= link_to "inquiries.title", admin_inquiry_path(inquiries.id)%>
-  <%= inquiries.content %>
+  <table class="inquiriy">
+    <tr>
+      <td>No</td>
+      <td>件名</td>
+      <td>お問合せ内容</td>
+    </tr>
+    <tr>
+      <td><%= inquiries.id %></td>
+      <td><%= link_to inquiries.title, admin_inquiry_path(inquiries.id)%></td>
+      <td><%= inquiries.content .truncate(24) %></td>
+    </tr>
+  </table>
 <% end %>
