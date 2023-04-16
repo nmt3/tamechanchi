@@ -1,15 +1,23 @@
 <h2>お問い合せ内容</h2>
-  <p>名前</p>
-  <%= @inquiry.name %>
-
-  <p>件名</p>
-  <%= @inquiry.title %>
-
-  <p>お問合せ内容</p>
-  <%= @inquiry.content %>
-
-  <p>電話番号</p>
-  <%= @inquiry.phone %>
-
-  <p>メールアドレス</p>
-  <%= @inquiry.mail %>
+<table class="inquiry">
+  <tr>
+    <td>名前</td>
+    <td><%= @inquiry.title %></td>
+  </tr>
+  <tr>
+    <td>件名</td>
+    <td><%= @inquiry.title %></td>
+  </tr>
+  <tr>
+    <td>お問合せ内容</td>
+    <td><%= @inquiry.content %></td>
+  </tr>
+  <tr>
+    <td>電話番号</td>
+    <td><%= @inquiry.phone %></td>
+  </tr>
+  <tr>
+    <td>メールアドレス</td>
+    <td><%= @inquiry.mail %></td>
+  </tr>
+</table>
