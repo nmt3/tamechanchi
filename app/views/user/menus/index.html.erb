@@ -1,9 +1,13 @@
 <h2>メニュー一覧</h2>
 <% @menus.each do |menu| %>
-
-  <%= link_to menu_path(menu.id) do %>
-    <%= menu.name %>
-  <% end %>
-
-  <%= menu.price %>
+  <table class="menu_index">
+    <tr>
+      <td>
+        <%= link_to menu_path(menu.id) do %>
+          <%= menu.name %>
+        <% end %>
+      </td>
+      <td><%= menu.price %></td>
+    </tr>
+  </table>
 <% end %>
