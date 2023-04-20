@@ -1,8 +1,17 @@
 @use '~bootstrap/scss/bootstrap';
 
+ul li {
+  list-style: none;
+}
+
 .home {
   text-align: center;
   margin-top: 23%;
+}
+
+.user_inquiry{
+  width: 100%;
+  margin-top: 30px;
 }
 
 
@@ -11,4 +20,9 @@
   text-align: center;
   background-color: blue;
   }
+}
+
+.user_inquiry{
+  text-align: center;
+  margin_top: 20px;
 }
