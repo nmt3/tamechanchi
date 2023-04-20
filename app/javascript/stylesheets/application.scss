@@ -1,1 +1,14 @@
 @use '~bootstrap/scss/bootstrap';
+
+.home {
+  text-align: center;
+  margin-top: 23%;
+}
+
+
+@media screen and (max-width:768px){
+.home{
+  text-align: center;
+  background-color: blue;
+  }
+}
