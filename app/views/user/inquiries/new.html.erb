@@ -1,19 +1,28 @@
 <h2>お問い合せ</h2>
 <%= form_with model: Inquiry.new do |f| %>
-  <%= f.label "名前" %>
-  <%= f.text_field :name %>
-
-  <%= f.label "件名" %>
-  <%= f.text_field :title %>
-
-  <%= f.label "お問い合わせ内容" %>
-  <%= f.text_area :content %>
-
-  <%= f.label "電話番号" %>
-  <%= f.text_field :phone %>
-
-  <%= f.label "メールアドレス" %>
-  <%= f.text_field :mail %>
-
-  <%= f.submit "送信" %>
+  <table class="inquiry">
+    <tr>
+     <td>名前</td>
+     <td><%= f.text_field :name %></td>
+    </tr>
+    <tr>
+     <td>件名</td>
+     <td><%= f.text_field :title %></td>
+    </tr>
+    <tr>
+     <td>お問い合わせ内容</td>
+     <td><%= f.text_area :content %></td>
+    </tr>
+    <tr>
+     <td>電話番号</td>
+     <td><%= f.text_field :phone %></td>
+    </tr>
+    <tr>
+     <td>メールアドレス</td>
+     <td><%= f.text_field :mail %></td>
+    </tr>
+    <tr>
+     <td colspan="2" align="center"><%= f.submit "送信" %></td>
+    </tr>
+  </table>
 <% end %>
