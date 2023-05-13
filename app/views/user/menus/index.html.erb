@@ -2,7 +2,7 @@
 <% @menus.each do |menu| %>
   <table class="menu_index">
     <tr>
-      <td>
+      <td id="jquery">
         <%= link_to menu_path(menu.id) do %>
           <%= menu.name %>
         <% end %>
