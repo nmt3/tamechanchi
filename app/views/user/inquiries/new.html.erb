@@ -2,27 +2,37 @@
  <h2>お問い合せ</h2>
  <%= form_with model: Inquiry.new do |f| %>
   <ul class="user_inquiry_form">
-   <li>
+   <li class="i_label">
     <%= f.label "名前" %>
+   </li>
+   <li class="i_ele">
     <%= f.text_field :name %>
    </li>
-   <li>
+   <li class="i_label">
     <%= f.label "件名" %>
+   </li>
+   <li class="i_ele">
     <%= f.text_field :title %>
    </li>
-   <li>
+   <li class="i_label">
     <%= f.label "お問い合わせ内容" %>
+   </li>
+   <li class="i_ele">
     <%= f.text_area :content %>
    </li>
-   <li>
+   <li class="i_label">
     <%= f.label "電話番号" %>
+   </li>
+   <li class="i_ele">
     <%= f.text_field :phone %>
    </li>
-   <li>
+   <li class="i_label">
     <%= f.label "メールアドレス" %>
+    </li>
+    <li class="i_ele">
     <%= f.text_field :mail %>
    </li>
-    <li>
+   <li class="submit">
     <%= f.submit "送信" %>
    </li>
   </ul>

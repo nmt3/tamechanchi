@@ -14,6 +14,16 @@ ul li {
   margin-top: 30px;
 }
 
+.i_label{
+  text_align: start;
+}
+
+.i_ele{
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+
 
 @media screen and (max-width:768px){
 .home{
