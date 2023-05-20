@@ -5,6 +5,7 @@ class CreateShops < ActiveRecord::Migration[6.1]
       t.string :address
       t.string :post_code
       t.string :business_time
+      t.string :business_day
       t.string :holiday
 
 

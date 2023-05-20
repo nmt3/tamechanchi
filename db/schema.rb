@@ -81,6 +81,7 @@ ActiveRecord::Schema.define(version: 2023_04_05_104703) do
     t.string "address"
     t.string "post_code"
     t.string "business_time"
+    t.string "business_day"
     t.string "holiday"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
