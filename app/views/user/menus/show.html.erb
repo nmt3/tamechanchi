@@ -3,17 +3,14 @@
 <% else %>
   <%= image_tag "no_image", size: "300x300" %>
 <% end %>
-<table class="menu_show">
-  <tr>
-    <td>商品名</td>
-    <td><%= @menu.name %></td>
-  </tr>
-  <tr>
-    <td>価格(税込)</td>
-    <td>¥<%= @menu.price %>(¥<%= @menu.with_tax_price %>)</td>
-  </tr>
-  <tr>
-    <td>ジャンル</td>
-    <td><%= @menu.genre.name %></td>
-  </tr>
-</table>
+<dl class="menu_show">
+  <dt>商品名</dt>
+  <dd><%= @menu.name %><d>
+</dl>
+  <dt>価格(税込)</dt>
+  <dd>¥<%= @menu.price %>(¥<%= @menu.with_tax_price %>)</dd>
+</dl>
+<dl>
+  <dt>ジャンル</dt>
+  <dd><%= @menu.genre.name %></dd>
+</dl>
