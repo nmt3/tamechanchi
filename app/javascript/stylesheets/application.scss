@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @use '~bootstrap/scss/bootstrap';
 
 ul li {
@@ -10,7 +11,7 @@ ul li {
 }
 
 .user_inquiry{
-  width: 100%;
+  text_align: center;
   margin-top: 30px;
 }
 
@@ -24,19 +25,28 @@ ul li {
   margin: 0 20px;
 }
 
+.back {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+.back img {
+  width: 50px;
+}
 
-@media screen and (max-width:768px){
-.home{
-  text-align: center;
-  background-color: blue;
+@media screen and (max-width:768px) {
+  .home{
+    text-align: center;
+    background-color: blue;
+    }
+
+  h1{
+    font-size: 25px;
   }
-}
 
-h1{
-  font-size: 25px;
-}
+  .user_inquiry{
+    text-align: center;
+    margin_top: 20px;
+  }
 
-.user_inquiry{
-  text-align: center;
-  margin_top: 20px;
 }

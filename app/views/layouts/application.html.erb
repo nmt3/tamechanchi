@@ -6,6 +6,11 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+    <!--<script type='text/javascript' src="/js/jquery.validate.min.js"></script>-->
+
+    <!--<script type='text/javascript' src="/js/jquery.validate.handler.js"></script>-->
+
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -15,7 +20,11 @@
       <%= render "layouts/header" %>
     <% end %>
 
-    <script src="js/script.js"></script>
+    <span id="back">
+      <a href="#">
+        <img src="aseets/images/arrow.png" alt="">
+      </a>
+    </span>
     <%= yield %>
   </body>
 </html>
