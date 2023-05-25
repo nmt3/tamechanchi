@@ -1,3 +1,17 @@
+<p>ジャンル検索</p>
+<tbody>
+  <% @genres.each do |genre| %>
+    <tr>
+      <% if genre.present? == true %>
+      <td>
+        <%= link_to genre.name, menus_path(genre_id: genre.id), class: "text-secondary" %>
+      </td>
+      <% end %>
+    </tr>
+  <% end %>
+</tbody>
+
+
 <h2>メニュー一覧</h2>
 <% @menus.each do |menu| %>
   <table class="menu_index">
