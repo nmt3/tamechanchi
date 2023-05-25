@@ -16,13 +16,13 @@ class Admin::ShopsController < ApplicationController
   def create
     @shop = Shop.new(shop_params)
     @shop.save
-    redirect_to "/admin"
+    redirect_to admin_path
   end
 
   def update
     @shop = Shop.find(params[:id])
     @shop.update(shop_params)
-    redirect_to "/admin"
+    redirect_to admin_path
   end
 
   private
