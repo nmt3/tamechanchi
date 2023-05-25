@@ -11,7 +11,11 @@ Rails.application.routes.draw do
     root to: 'homes#top'
     resources :menus, only: [:index, :show]
     resources :shops, only: [:index]
-    resources :inquiries, only: [:new, :create]
+    resources :inquiries, only: [:new, :create] do
+      collection do
+        get :thanks
+      end
+    end
   end
 
   # 管理者用
@@ -24,7 +28,7 @@ Rails.application.routes.draw do
   namespace :admin do
     get "/" => "shops#index"
     resources :menus, only: [:new, :index, :show, :edit, :create, :update, :destroy]
-    resources :genres, only:[:index, :edit, :create, :update]
+    resources :genres, only:[:index, :edit, :create, :update, :destroy]
     resources :shops, only: [:new, :edit, :create, :update]
     resources :inquiries, only: [:index, :show, :edit, :create, :update, :destroy]
   end

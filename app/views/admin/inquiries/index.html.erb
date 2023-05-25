@@ -1,12 +1,14 @@
 <table class="inquiriy">
   <tr>
-    <td>No</td>
-    <td>件名</td>
-    <td>お問合せ内容</td>
+    <th>No</th>
+    <th>お問合せ日時 </th>
+    <th>件名</th>
+    <th>お問合せ内容</th>
   </tr>
   <% @inquiries.each do |inquiries| %>
     <tr>
       <td><%= inquiries.id %></td>
+      <td><%= inquiries.created_at.strftime('%Y年%m月%d日 %H時%M分') %></td>
       <td><%= link_to inquiries.title, admin_inquiry_path(inquiries.id)%></td>
       <td><%= inquiries.content .truncate(24) %></td>
     </tr>

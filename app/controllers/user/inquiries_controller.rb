@@ -3,10 +3,13 @@ class User::InquiriesController < ApplicationController
     @inquiry = Inquiry.new
   end
 
+  def thanks
+  end
+
   def create
     @inquiry = Inquiry.new(inquiries_params)
     @inquiry.save
-    redirect_to "/"
+    redirect_to thanks_inquiries_path
   end
 
   private
